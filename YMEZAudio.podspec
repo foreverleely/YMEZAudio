@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "YMEZAudio"
-  spec.version      = "0.0.5"
+  spec.version      = "0.0.6"
   spec.summary      = "the EZAudio's fork"
 
   spec.description  = "add ipod library URL for EZAudioFile"
@@ -29,7 +29,7 @@ Pod::Spec.new do |spec|
   
   spec.ios.deployment_target = '8.0'
   spec.osx.deployment_target = '10.8'
-  spec.source       = { :git => "https://github.com/foreverleely/YMEZAudio.git", :tag => s.version }
+  spec.source       = { :git => "https://github.com/foreverleely/YMEZAudio.git", :tag => spec.version }
   spec.exclude_files = [ 'EZAudio/TPCircularBuffer.{h,c}', 'EZAudio/EZAudioiOS.h', 'EZAudio/EZAudioOSX.h' ]
   spec.ios.frameworks = 'AudioToolbox','AVFoundation','GLKit', 'Accelerate'
   spec.osx.frameworks = 'AudioToolbox','AudioUnit','CoreAudio','QuartzCore','OpenGL','GLKit', 'Accelerate'

@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "YMEZAudio"
-  spec.version      = "0.0.4"
+  spec.version      = "0.0.5"
   spec.summary      = "the EZAudio's fork"
 
   spec.description  = "add ipod library URL for EZAudioFile"
@@ -27,26 +27,20 @@ Pod::Spec.new do |spec|
 
   spec.author             = { "liyang_a" => "foreverleely@hotmail.com" }
   
-  spec.ios.deployment_target = "8.0"
-  spec.osx.deployment_target = "10.8"
-
-  spec.source       = { :git => "https://github.com/foreverleely/YMEZAudio.git", :tag => "#{spec.version}" }
-
-  spec.source_files  = "EZAudio/*.{h,m,c}"
+  spec.ios.deployment_target = '8.0'
+  spec.osx.deployment_target = '10.8'
+  spec.source       = { :git => "https://github.com/foreverleely/YMEZAudio.git", :tag => s.version }
   spec.exclude_files = [ 'EZAudio/TPCircularBuffer.{h,c}', 'EZAudio/EZAudioiOS.h', 'EZAudio/EZAudioOSX.h' ]
-
   spec.ios.frameworks = 'AudioToolbox','AVFoundation','GLKit', 'Accelerate'
   spec.osx.frameworks = 'AudioToolbox','AudioUnit','CoreAudio','QuartzCore','OpenGL','GLKit', 'Accelerate'
-
-  spec.requires_arc = true
-
+  spec.requires_arc = true;
   spec.default_subspec = 'Full'
   spec.subspec 'Core' do |core|
       core.source_files  = 'EZAudio/*.{h,m,c}'
   end
 
   spec.subspec 'Full' do |full|
-      full.dependency 'TPCircularBuffer'
+      full.dependency 'TPCircularBuffer', '1.1'
       full.dependency 'YMEZAudio/Core'
   end
 

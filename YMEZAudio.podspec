@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "YMEZAudio"
-  spec.version      = "0.0.2"
+  spec.version      = "0.0.3"
   spec.summary      = "the EZAudio's fork"
 
   spec.description  = "add ipod library URL for EZAudioFile"
@@ -47,7 +47,7 @@ Pod::Spec.new do |spec|
 
   spec.subspec 'Full' do |full|
       full.dependency 'TPCircularBuffer'
-      full.dependency 'EZAudio/Core'
+      full.dependency 'YMEZAudio/Core'
   end
 
 end

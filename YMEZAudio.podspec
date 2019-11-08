@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "YMEZAudio"
-  spec.version      = "0.0.3"
+  spec.version      = "0.0.4"
   spec.summary      = "the EZAudio's fork"
 
   spec.description  = "add ipod library URL for EZAudioFile"
